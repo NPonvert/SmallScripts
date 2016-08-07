@@ -1,6 +1,6 @@
 import re
 from Bio import Entrez
-Entrez.email = "nathaniel_ponvert@brown.edu" 
+#Entrez.email = "" 
 infile = raw_input('infilename: ')
 outfile = raw_input('outfilename: ')
 outfile1 = raw_input('file for Athaliana only results: ')
