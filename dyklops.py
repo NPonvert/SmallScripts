@@ -17,7 +17,7 @@ with open(infile) as file:
 				handle = Entrez.efetch(db="protein", id=VAR, rettype="gb", retmode="text")	
 				for line in handle:
 					species = re.findall('\[([.\w\s]*)\]', line, re.DOTALL)
-					atnum = re.findall('/[lg][oe][cn][ue][s]?[\_]?[t]{?[a]?[g]?=".*\_*([Aa][RrTt][Aa\d][LlGg][Yy]?[Dd\d]{0,5}[Rr]?[Aa]?[Ff]?[Tt]?\_?[\d]{0,10})"', line)
+					atnum = re.findall('/[lg][oe][cn][ue][s]?[\_]?[t]?[a]?[g]?=".*\_*([Aa][RrTt][Aa\d][LlGg][Yy]?[Dd\d]{0,5}[Rr]?[Aa]?[Ff]?[Tt]?\_?[\d]{0,10})"', line)
 					eco = re.findall('/ecotype="(.?)\s*.*"', line)
 					if atnum:
 						if atnum not in outlist:
